@@ -1,0 +1,16 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+# Thumbnails
+._*
+.Spotlight-V100
+.Trashes
+node_modules
+*.log
+/node_modules/
+bower_components/
+npm-debug.log
+/tmp/
+/scripts/bower/bower-*
+.tmp

@@ -1,0 +1,29 @@
+{
+	"name": "sequencejs",
+	"version": "0.0.0",
+	"homepage": "https://github.com/juancamiloestela/Sequence.js",
+	"authors": [
+		
+	],
+	"dependencies": {
+		"jquery": ">=1.6"
+	},
+	"description": "Apply or remove classes to a set of elements in sequence for cool css animations",
+	"main": [
+		"dist/js/dismissable.js"
+	],
+	"keywords": [
+		"animation",
+		"transitons",
+		"ui",
+		"front-end"
+	],
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}

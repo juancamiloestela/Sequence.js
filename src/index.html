@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Sequencejs</title>
+	<meta name="description" content="Apply or remove classes to a set of elements in sequence for cool css animations">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<style>
+		body{
+			font-size: 16px;
+			font-family: sans-serif;
+		}
+
+		.sequenced-list li{
+			opacity: 0;
+			-ms-transition: opacity 300ms ease-in;
+			transition: opacity 300ms ease-in;
+		}
+	</style>
+</head>
+
+<body>
+
+	<a href="#" onclick="run();">Run</a>
+
+	<ul class="sequenced-list">
+		<li>One</li>
+		<li>Two</li>
+		<li>Three</li>
+		<li>Four</li>
+		<li>Five</li>
+		<li>Six</li>
+	</ul>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
+
+	<script src="js/sequence.min.js"></script>
+
+	<script>
+		function run(){
+			$('.sequenced-list li').sequence({
+				offset: 600, // ms between items
+				properties: {
+					opacity: 1
+				},
+				setup: function(elements){
+					// clean up
+					$(elements).removeAttr('style');
+				}
+			});
+		}
+	</script>
+</body>
+
+</html>
