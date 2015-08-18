@@ -2,7 +2,7 @@
  * Sequence.js
  * http://www.github.com/juancamiloestela/Sequence.js
  * MIT licensed
- * Version 0.1
+ * Version 0.0.1
  *
  * Copyright (C) 2013 Juan Camilo Estela http://www.mecannical.com
  *

@@ -78,23 +78,29 @@ module.exports = function(grunt) {
 		},
 
 		version: {
-			options: {
-				release: 'patch'
+			options:{
+				prefix: '(\\* |")[Vv]ersion[\'"]?\\s*[:=]?\\s*[\'"]?'
+			},
+			defaults: {
+				src: ['bower.json', '<%= dev %>/src/*.js', '<%= dev %>/less/*.css']
 			},
 			patch: {
-				src: ['package.json', 'bower.json', '<%= prod %>/js/*.js', '<%= prod %>/css/*.css']
+				options: {
+					release: 'patch'
+				},
+				src: ['package.json', 'bower.json', '<%= dev %>/src/*.js', '<%= dev %>/less/*.css']
 			},
 			minor:{
 				options: {
 					release: 'minor'
 				},
-				src: ['package.json', 'bower.json', '<%= prod %>/js/*.js', '<%= prod %>/css/*.css']
+				src: ['package.json', 'bower.json', '<%= dev %>/src/*.js', '<%= dev %>/less/*.css']
 			},
 			major:{
 				options: {
 					release: 'major'
 				},
-				src: ['package.json', 'bower.json', '<%= prod %>/js/*.js', '<%= prod %>/css/*.css']
+				src: ['package.json', 'bower.json', '<%= dev %>/src/*.js', '<%= dev %>/less/*.css']
 			}
 		},
 
@@ -118,8 +124,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-newer');
 
 	// Default task(s).
-	grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
-	grunt.registerTask('build', ['default', 'clean', 'copy:main', 'version:patch']);
+	grunt.registerTask('default', ['jshint', 'version:defaults', 'concat', 'uglify']);
+	grunt.registerTask('build', ['version:patch', 'default', 'clean', 'copy:main']);
 	grunt.registerTask('minor', ['build', 'version:minor']);
 	grunt.registerTask('major', ['build', 'version:major']);
 };

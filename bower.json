@@ -1,6 +1,6 @@
 {
-	"name": "sequencejs",
-	"version": "0.0.0",
+	"name": "sequence-js",
+	"version": "0.0.1",
 	"homepage": "https://github.com/juancamiloestela/Sequence.js",
 	"authors": [
 		
@@ -10,7 +10,7 @@
 	},
 	"description": "Apply or remove classes to a set of elements in sequence for cool css animations",
 	"main": [
-		"dist/js/dismissable.js"
+		"dist/js/sequence.js"
 	],
 	"keywords": [
 		"animation",

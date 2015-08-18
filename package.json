@@ -1,6 +1,6 @@
 {
-  "name": "sequencejs",
-  "version": "1.0.1",
+  "name": "sequence-js",
+  "version": "0.0.1",
   "repository": "https://github.com/juancamiloestela/Sequence.js",
   "dependencies": {},
   "devDependencies": {
