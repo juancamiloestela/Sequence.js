@@ -79,28 +79,28 @@ module.exports = function(grunt) {
 
 		version: {
 			options:{
-				prefix: '(\\* |")[Vv]ersion[\'"]?\\s*[:=]?\\s*[\'"]?'
+				prefix: '(\\* |")?[Vv]ersion[\'"]?\\s*[:=]?\\s*[\'"]?'
 			},
 			defaults: {
-				src: ['bower.json', '<%= dev %>/src/*.js', '<%= dev %>/less/*.css']
+				src: ['bower.json', '<%= dev %>/src/*.js', '<%= dev %>/less/*.less']
 			},
 			patch: {
 				options: {
 					release: 'patch'
 				},
-				src: ['package.json', 'bower.json', '<%= dev %>/src/*.js', '<%= dev %>/less/*.css']
+				src: ['package.json', 'bower.json', '<%= dev %>/src/*.js', '<%= dev %>/less/*.less']
 			},
 			minor:{
 				options: {
 					release: 'minor'
 				},
-				src: ['package.json', 'bower.json', '<%= dev %>/src/*.js', '<%= dev %>/less/*.css']
+				src: ['package.json', 'bower.json', '<%= dev %>/src/*.js', '<%= dev %>/less/*.less']
 			},
 			major:{
 				options: {
 					release: 'major'
 				},
-				src: ['package.json', 'bower.json', '<%= dev %>/src/*.js', '<%= dev %>/less/*.css']
+				src: ['package.json', 'bower.json', '<%= dev %>/src/*.js', '<%= dev %>/less/*.less']
 			}
 		},
 
