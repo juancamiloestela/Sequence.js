@@ -1,4 +1,4 @@
-/*! sequence-js - v0.0.1 - 2015-08-17 *//*!
+/*! sequence-js - v0.0.1 - 2015-09-01 *//*!
  * Sequence.js
  * http://www.github.com/juancamiloestela/Sequence.js
  * MIT licensed
